@@ -21,6 +21,20 @@ class ModelTrainer:
         self.model.compile(optimizer='sgd', loss='mean_squared_error')
 
     def train_model(self, xs, ys, epochs=500):
+        """
+        This function trains a model using the provided inputs and outputs for a specified number of
+        epochs.
+        
+        :param xs: The parameter `xs` typically represents the input data for training the model. It
+        could be a set of features or independent variables that the model will use to make predictions
+        :param ys: The parameter `ys` typically represents the target outputs or labels corresponding to
+        the input data `xs`. In the context of training a machine learning model, `ys` would be the
+        expected output values that the model should learn to predict when given the input data `xs`
+        :param epochs: The `epochs` parameter in the `train_model` function specifies the number of times
+        the model will iterate over the entire training dataset during the training process. Each epoch
+        consists of one forward pass and one backward pass of all the training examples. Increasing the
+        number of epochs can potentially improve the model's performance, defaults to 500 (optional)
+        """
         # Training the model on provided inputs (xs) and outputs (ys) for a set number of epochs
         self.model.fit(xs, ys, epochs=epochs)
 

@@ -8,6 +8,8 @@ import pandas as pd  # Import pandas
 
 class QuantizationAwareTrainer:
     def __init__(self):
+# This code snippet is defining a neural network model using the Sequential API in TensorFlow. Here's
+# a breakdown of what each part does:
         """
         The code defines a class with methods to load MNIST dataset and define a convolutional neural
         network model for image classification.

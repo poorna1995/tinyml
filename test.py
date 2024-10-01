@@ -8,6 +8,8 @@ hub_layer = hub.KerasLayer("YOUR_HUB_MODEL_URL", trainable=True)
 # Wrap the hub layer in a Lambda layer
 hub_layer_wrapper = tf.keras.layers.Lambda(lambda x: hub_layer(x))
 
+# This code snippet is defining a neural network model using the Sequential API in TensorFlow. Here's
+# a breakdown of what each part does:
 # Define the model using a Sequential API
 model = tf.keras.Sequential([
     hub_layer_wrapper,  # Use the wrapped layer
