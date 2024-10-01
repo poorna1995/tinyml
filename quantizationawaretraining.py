@@ -8,6 +8,10 @@ import pandas as pd  # Import pandas
 
 class QuantizationAwareTrainer:
     def __init__(self):
+        """
+        The code defines a class with methods to load MNIST dataset and define a convolutional neural
+        network model for image classification.
+        """
         self.model = None
         self.q_aware_model = None
         self.train_images = None
