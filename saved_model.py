@@ -22,6 +22,12 @@ class ModelHandler:
             tf.config.experimental.set_memory_growth(device, True)
 
     def download_image(self):
+        """
+        The `download_image` function downloads an image from a given URL, converts it for model input,
+        displays the image, and returns a numpy array suitable for model input.
+        :return: The function `download_image` returns a preprocessed image as a numpy array suitable
+        for model input.
+        """
         # Download the image and convert it for model input
         self.image_path = tf.keras.utils.get_file("image.jpg", self.image_url)
         img = tf.keras.utils.load_img(self.image_path, target_size=self.target_size)
