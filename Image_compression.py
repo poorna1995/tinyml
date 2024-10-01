@@ -19,6 +19,10 @@ class CatsVsDogsClassifier:
         self.tflite_model_file = None
 
     def load_data(self):
+        """
+        The `load_data` function sets the URL for the Cats vs Dogs dataset, formats images, and loads
+        the dataset split into training, validation, and test sets.
+        """
         setattr(tfds.image_classification.cats_vs_dogs, '_URL',
                 "https://download.microsoft.com/download/3/E/1/3E1C3F21-ECDB-4869-8368-6DEBA77B919F/kagglecatsanddogs_5340.zip")
 
